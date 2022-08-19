@@ -1,0 +1,15 @@
+
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+    <!-- <div name="entry">{{entry}}</div> -->
+   <div name="content">{{content|safe}}</div>
+    <form action="{% url 'edit' entry %}">
+    <button class="btn btn-primary">Edit</button>
+   </form>
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Encyclopedia
+{% endblock %}
+
+{% block body %}
+<form action="{% url 'save' %}" , method="POST">
+    {% csrf_token %}
+    <input type="text" name="title" value="{{title_tbc}}"></input>
+    <br><br>
+    <textarea name="txtarea" rows="1">{{content_tbc}}</textarea>
+    <!-- <textarea  name="txtarea" class="form-control" id="exampleFormControlTextarea1" rows="10">{{content_tbc}}</textarea> -->
+    <button class="btn btn-primary" type="submit">Save</button>
+</form>
+{% endblock %}

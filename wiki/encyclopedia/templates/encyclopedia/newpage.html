@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    New Page
+{% endblock %}
+
+{% block body %}
+    <form action="{% url 'created' %}">
+        <input type="text" name="title" placeholder="Title">
+        <br><br>
+        <!-- <textarea name="txtarea" rows="1" cols="5"></textarea> -->
+        <textarea class="form-control" name="txtarea" id="exampleFormControlTextarea1" rows="5"></textarea>
+        <button type="submit">Save</button>
+    </form>
+{% endblock %}
